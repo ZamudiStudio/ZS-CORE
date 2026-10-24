@@ -35,14 +35,14 @@ tasks:
     dest: ./resources/[core]
 
   # --- Zamudi Studio: zs_core und zs_character direkt von GitHub ---
-  # ANPASSEN: "ZamudiStudio/zs-core" durch dein Repo ersetzen (Organisation/Repo). Das Repo muss oeffentlich sein.
+  # Das Repo muss oeffentlich sein. Weitere kostenlose Resources (z. B. zs_jobs) kommen als weitere download_github-Schritte dazu.
   - action: download_github
-    src: https://github.com/ZamudiStudio/zs-core
+    src: https://github.com/ZamudiStudio/zs-free
     ref: main
     subpath: zs_core
     dest: ./resources/[zs]/zs_core
   - action: download_github
-    src: https://github.com/ZamudiStudio/zs-core
+    src: https://github.com/ZamudiStudio/zs-free
     ref: main
     subpath: zs_character
     dest: ./resources/[zs]/zs_character
