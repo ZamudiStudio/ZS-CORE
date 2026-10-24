@@ -10,7 +10,8 @@ Kostenlose Resources für RedM-Server von Zamudi Studio. Sie bauen aufeinander a
 ## Installation
 
 **Per txAdmin-Recipe:** Beim Einrichten eines neuen Servers „Remote URL Template“ wählen und eintragen:
-`https://raw.githubusercontent.com/ZamudiStudio/ZSCORE/main/recipe/recipe.yaml` txAdmin lädt alles, legt die Datenbank an und schreibt die `server.cfg`.
+`https://raw.githubusercontent.com/ZamudiStudio/ZSCORE/main/recipe/recipe.yaml`
+Danach lädt txAdmin alles, legt die Datenbank an und schreibt die `server.cfg`.
 
 **Von Hand:** Die Ordner `zs_core` und `zs_character` in `resources` legen und eintragen:
 
