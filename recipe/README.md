@@ -6,9 +6,9 @@ von GitHub, legt die Datenbank an und schreibt die `server.cfg`.
 ## Einrichten
 
 1. Das Repo muss **öffentlich** auf GitHub liegen (txAdmin kann keine privaten Repos laden).
-2. Die Recipe-Datei zeigt auf `https://github.com/ZamudiStudio/zs-free`. Bei einem anderen Repo-Namen die Adressen in `recipe.yaml` anpassen.
+2. Die Recipe-Datei zeigt auf `https://github.com/ZamudiStudio/ZSCORE`. Bei einem anderen Repo-Namen die Adressen in `recipe.yaml` anpassen.
 3. In txAdmin beim Einrichten eines neuen Servers **Remote URL Template** wählen und die Raw-Adresse der Datei eintragen:
-   `https://raw.githubusercontent.com/ZamudiStudio/zs-free/main/recipe/recipe.yaml`
+   `https://raw.githubusercontent.com/ZamudiStudio/ZSCORE/main/recipe/recipe.yaml`
 4. Die Fragen von txAdmin (Servername, Lizenzkey, Datenbank) beantworten und den Recipe-Lauf starten.
 
 ## Lokaler Test ohne GitHub

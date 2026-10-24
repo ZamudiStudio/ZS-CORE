@@ -1,4 +1,4 @@
-# Zamudi Studio – Free Resources
+# Zamudi Studio – Free Resources (ZSCORE)
 
 Kostenlose Resources für RedM-Server von Zamudi Studio. Sie bauen aufeinander auf und laufen auf `zs_core`.
 
@@ -10,7 +10,7 @@ Kostenlose Resources für RedM-Server von Zamudi Studio. Sie bauen aufeinander a
 ## Installation
 
 **Per txAdmin-Recipe:** Beim Einrichten eines neuen Servers „Remote URL Template“ wählen und eintragen:
-`https://raw.githubusercontent.com/ZamudiStudio/zs-free/main/recipe/recipe.yaml` txAdmin lädt alles, legt die Datenbank an und schreibt die `server.cfg`.
+`https://raw.githubusercontent.com/ZamudiStudio/ZSCORE/main/recipe/recipe.yaml` txAdmin lädt alles, legt die Datenbank an und schreibt die `server.cfg`.
 
 **Von Hand:** Die Ordner `zs_core` und `zs_character` in `resources` legen und eintragen:
 
