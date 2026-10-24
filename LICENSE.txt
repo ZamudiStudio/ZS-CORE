@@ -1,0 +1,27 @@
+ZAMUDI STUDIO FREE LICENSE (ZS-Free)
+
+Stand: Oktober 2026. Diese Lizenz ist eine Vorlage und ersetzt keine Rechtsberatung. Vor der Veroeffentlichung bitte rechtlich pruefen lassen.
+
+Gilt fuer die Resources zs_core und zs_character sowie die zugehoerige Dokumentation und das txAdmin-Recipe ("Software").
+
+1. Das ist erlaubt
+   - Die Software kostenlos herunterladen, auf eigenen RedM-Servern betreiben (privat und oeffentlich, auch mit Spenden oder VIP-Angeboten auf dem Server) und fuer den eigenen Server aendern.
+   - Unveraenderte Kopien kostenlos an andere weitergeben, solange diese Lizenzdatei und der Hinweis auf Zamudi Studio erhalten bleiben.
+   - Eigene Resources schreiben, die ueber die oeffentliche API der Software (exports.zs_core:...) mit ihr zusammenarbeiten, und diese verkaufen. Fuer solche Resources gilt diese Lizenz nicht.
+
+2. Das ist nicht erlaubt
+   - Die Software, Teile davon oder geaenderte Fassungen zu verkaufen, zu vermieten oder in einem Bezahlpaket anzubieten.
+   - Die Software unter anderem Namen als eigenes Werk zu veroeffentlichen.
+   - Urheberrechtshinweise und diese Lizenzdatei zu entfernen.
+   - Geaenderte Fassungen unter dem Namen zs_core, zs_character oder Zamudi Studio zu veroeffentlichen, ohne sie als Aenderung zu kennzeichnen.
+
+3. Gewaehrleistung und Haftung
+   Die Software wird wie besehen und ohne jede Gewaehr geliefert. Soweit gesetzlich zulaessig, haftet Zamudi Studio nicht fuer Datenverlust, Ausfaelle oder sonstige Schaeden. Vor Updates bitte die Datenbank sichern.
+
+4. Drittinhalte
+   Die Software enthaelt keinen Code oder Daten aus VORP oder anderen Frameworks. Marken- und Spielrechte an RedM, Red Dead Redemption und Rockstar Games liegen bei den jeweiligen Rechteinhabern; die Software ist von ihnen nicht genehmigt oder unterstuetzt.
+
+5. Laufzeit
+   Die Rechte gelten unbefristet, enden aber bei einem Verstoss gegen diese Lizenz.
+
+(c) Zamudi Studio. Alle Rechte vorbehalten, soweit oben nicht ausdruecklich eingeraeumt.

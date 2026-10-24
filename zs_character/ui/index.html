@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zs_character</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" class="hidden">
+
+  <!-- Auswahl -->
+  <section id="screen-select" class="panel">
+    <header>
+      <h1 id="t-title"></h1>
+      <p id="slots" class="muted"></p>
+    </header>
+    <ul id="char-list"></ul>
+    <div class="actions">
+      <button id="btn-new" class="primary"></button>
+    </div>
+  </section>
+
+  <!-- Erstellung -->
+  <section id="screen-create" class="panel hidden">
+    <ol id="steps">
+      <li data-step="1"></li><li data-step="2"></li><li data-step="3"></li>
+    </ol>
+
+    <div class="step" data-step="1">
+      <label><span id="l-firstname"></span><input id="f-firstname" maxlength="30" autocomplete="off"></label>
+      <label><span id="l-lastname"></span><input id="f-lastname" maxlength="30" autocomplete="off"></label>
+      <label><span id="l-age"></span><input id="f-age" type="number" value="25"></label>
+      <div class="field">
+        <span id="l-gender"></span>
+        <div class="seg">
+          <button type="button" id="g-male" class="on"></button>
+          <button type="button" id="g-female"></button>
+        </div>
+      </div>
+      <label><span id="l-description"></span><textarea id="f-description" maxlength="500" rows="3"></textarea></label>
+    </div>
+
+    <div class="step hidden" data-step="2">
+      <label><span id="l-height"></span><input id="f-height" type="range"></label>
+      <div id="categories"></div>
+      <p id="no-options" class="muted hidden"></p>
+    </div>
+
+    <div class="step hidden" data-step="3">
+      <dl id="summary"></dl>
+    </div>
+
+    <p id="error" class="error hidden"></p>
+    <div class="actions">
+      <button id="btn-back"></button>
+      <button id="btn-next" class="primary"></button>
+    </div>
+  </section>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+name: Zamudi Core (RedM)
+version: v1.0.0
+author: Zamudi Studio
+description: RedM-Server mit zs_core (Konten, Charaktere, Geld, Jobs) und zs_character (Auswahl und Erstellung). Legt die Datenbank an und schreibt die server.cfg.
+
+# Mindestversion von txAdmin-Recipes und FXServer
+$engine: 3
+$minFxVersion: 5000
+$onesync: on
+
+tasks:
+  # --- Verzeichnisse ---
+  - action: ensure_dir
+    path: ./resources/[core]
+  - action: ensure_dir
+    path: ./resources/[managers]
+  - action: ensure_dir
+    path: ./resources/[zs]
+  - action: ensure_dir
+    path: ./tmp
+
+  # --- Standard-Manager (mapmanager, spawnmanager) ---
+  - action: download_github
+    src: https://github.com/citizenfx/cfx-server-data
+    ref: master
+    subpath: resources/[managers]
+    dest: ./resources/[managers]
+
+  # --- oxmysql (Datenbank-Anbindung) ---
+  - action: download_file
+    url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
+    path: ./tmp/oxmysql.zip
+  - action: unzip
+    src: ./tmp/oxmysql.zip
+    dest: ./resources/[core]
+
+  # --- Zamudi Studio: zs_core und zs_character direkt von GitHub ---
+  # ANPASSEN: "ZamudiStudio/zs-core" durch dein Repo ersetzen (Organisation/Repo). Das Repo muss oeffentlich sein.
+  - action: download_github
+    src: https://github.com/ZamudiStudio/zs-core
+    ref: main
+    subpath: zs_core
+    dest: ./resources/[zs]/zs_core
+  - action: download_github
+    src: https://github.com/ZamudiStudio/zs-core
+    ref: main
+    subpath: zs_character
+    dest: ./resources/[zs]/zs_character
+
+  # --- Datenbank anlegen und Verbindung merken (liefert {{dbConnectionString}}) ---
+  - action: connect_database
+
+  # --- server.cfg schreiben ---
+  - action: write_file
+    file: ./server.cfg
+    data: |
+      # Zamudi Core, erzeugt von txAdmin ({{recipeName}})
+      {{serverEndpoints}}
+
+      sv_hostname "{{serverName}}"
+      sv_maxclients {{maxClients}}
+      set gamename rdr3
+      sv_enforceGameBuild 1491
+      set locale "de-DE"
+      sv_scriptHookAllowed 0
+
+      sv_licenseKey "{{svLicense}}"
+      set mysql_connection_string "{{dbConnectionString}}"
+
+      # Reihenfolge wichtig
+      ensure oxmysql
+      ensure mapmanager
+      ensure spawnmanager
+      ensure zs_core
+      ensure zs_character
+
+  # --- Aufraeumen ---
+  - action: remove_path
+    path: ./tmp

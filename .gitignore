@@ -1,0 +1,7 @@
+# Lokaler Testserver (enthaelt Server-Dateien, Lizenzkey, Datenbank-Zugang)
+LOCALHOST/
+secrets.cfg
+*.log
+# Gebautes Paket
+recipe/dist/
+recipe/_stage/
